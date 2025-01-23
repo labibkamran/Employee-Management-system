@@ -2,13 +2,15 @@ import { useState } from "react"
 import React  from 'react'
 
 const 
-Login = () => {
+Login = ({handleLogin}) => {
 
     const [email, setemail] = useState('');
     const [pasword, setpasword] = useState('');
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log('submitted')
+        handleLogin(email,pasword);
+        setemail('');
+        setpasword('');
     }
   return (
     <div className='flex h-screen w-screen  items-center justify-center'>
@@ -16,9 +18,6 @@ Login = () => {
             <form 
             onSubmit={(e) =>{
                 submitHandler(e);
-                console.log("email is ${email}" + "password is ${pasword}");
-                setemail('');
-                setpasword('');
             }}
             className='flex flex-col items-center justify-center'>
                 <input 
