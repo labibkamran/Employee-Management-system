@@ -14,7 +14,7 @@ const employees = [
         "tasks": [
             {
                 "active": true,
-                "newTask": true,
+                "newTask": false,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Update website",

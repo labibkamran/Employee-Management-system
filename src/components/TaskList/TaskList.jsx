@@ -49,10 +49,10 @@ const TaskList = ({ data }) => {
                     return <NewTask key={idx} data={elem} />;
                 }
                 if (elem.completed) {
-                    return <CompleteTask key={idx} data={elem} onAccept={() => handleAccept(elem, data.id)} />;
+                    return '';
                 }
                 if (elem.failed) {
-                    return <FailedTask key={idx} data={elem} />;
+                    return '';
                 }
             })}
         </div>
